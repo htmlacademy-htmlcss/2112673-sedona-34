@@ -47,7 +47,12 @@
           <ul class="breadcrums">
             <li class="breadcrums-item">
               <a class="breadcrums-link" href="index.html">
-                <img src="/images/gallery/union.svg" width="12" height="12">>
+                <svg class="breadcrums-icon" width="12" height="12">
+                  <use href="./images/sprite.svg#union"></use>
+                </svg>
+                <svg class="breadcrums-icon" width="6" height="8">
+                  <use href="./images/sprite.svg#arrow"></use>
+                </svg>
               </a>
             </li>
             <li class="breadcrums-item">
@@ -115,13 +120,19 @@
             <option>Сначала дорогие</option>
           </select>
           <a class="button button-choice" href="#">
-            <img src="./images/gallery/gallery-cards.svg" alt="Показать карточки" width="48" height="48">
+            <svg class="icon-show" width="48" height="48">
+              <use href="./images/sprite.svg#icon-cards"></use>
+            </svg>
           </a>
           <a class="button" href="#">
-            <img src="./images/gallery/gallery-slide-show.svg" alt="Показать слайдшоу" width="48" height="48">
+            <svg class="icon-show" width="48" height="48">
+              <use href="./images/sprite.svg#icon-slide-show"></use>
+            </svg>
           </a>
           <a class="button" href="#">
-            <img src="./images/gallery/gallery-list.svg" alt="Показать список" width="48" height="48">
+            <svg class="icon-show" width="48" height="48">
+              <use href="./images/sprite.svg#icon-list"></use>
+            </svg>
           </a>
           <ul class="card">
             <li class="card-item">
@@ -199,7 +210,7 @@
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
-                <option value="4">4</option>
+                <option value="4" checked>4</option>
               </select>
             </p>
           </div>
@@ -221,25 +232,33 @@
       <footer class="footer">
         <ul class="social">
           <li class="social-item">
-            <a class="social-link" href=" https://vk.com/htmlacademy">
-              <img src="./images/footer/social-vk.svg" alt="Иконка VK" width="24" height="14">
+            <a class="social-link" href="https://vk.com/htmlacademy">
+              <svg class="social-icon" width="24" height="14">
+                <use href="./images/sprite.svg#icon-vk"></use>
+              </svg>
             </a>
           </li>
           <li class="social-item">
             <a class="social-link" href="https://t.me/htmlacademy">
-              <img src="./images/footer/social-telegram.svg" alt="Иконка Telegram" width="18" height="17">           
+              <svg class="social-icon" width="18" height="17">
+                <use href="./images/sprite.svg#icon-telegram"></use>
+              </svg>       
             </a>
           </li>
           <li class="social-item">
-            <a href=" https://www.youtube.com/user/htmlacademyru">
-              <img src="./images/footer/social-youtube.svg" width="22" height="17">
-            </a>
+            <svg class="social-icon" width="22" height="17">
+                <use href="./images/sprite.svg#icon-youtube"></use>
+              </svg>   
           </li>
         </ul>
         <address class="contacts-address">
           <a class="social-link" href="tel:+78128121212" property="telephone">+7 (812) 812-12-12</a>
         </address>
-        <a href="https://htmlacademy.ru/">HTML Academy</a>
+        <a href="https://htmlacademy.ru/">
+          <svg class="social-icon" width="115" height="33">
+                <use href="./images/sprite.svg#icon-logo-htmlacademy"></use>
+              </svg> 
+        </a>
       </footer>
       <!-- ============== END OF FOOTER =============== -->
     </div>
