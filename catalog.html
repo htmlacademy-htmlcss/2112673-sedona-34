@@ -106,13 +106,13 @@
             </div>
             <div class="filter-right-wrapper">
               <p class="filter-legend price">Стоимость, ₽:</p>
-              <div>
-                <input class="control-input" type="number" placeholder="от"/>
-                <input class="control-input" type="number" placeholder="до"/>
+              <div class="control-wrapper">
+                <input class="control-input control-left-rounding" type="number" placeholder="0"/>
+                <input class="control-input control-right-rounding" type="number" placeholder="9000"/>
                 <input class="control-input" type="range" min="0" max="9000"/>
               </div>
               <div>
-                <input class="buttons button-small blue" type="submit" value="Применить"/>
+                <input class="filter-butten buttons button-small blue" type="submit" value="Применить"/>
                 <input class="filter-reset" type="reset" value="Сбросить"/>
               </div>
             </div>
@@ -122,7 +122,7 @@
         <section class="results">
           <div class="results-wrapper">
             <h2 class="title">Найдено гостиниц: <span>38</span></h2>
-            <select class="results-price price-select" aria-label="Сортировка">
+            <select class="results-price price-select" aria-label="Предпочтительная цена">
               <option>Сначала дешёвые</option>
               <option>Сначала популярные</option>
               <option>Сначала дорогие</option>
@@ -147,7 +147,9 @@
           </div>
           <ul class="cards list">
             <li class="cards-item">
-              <img class="cards-img" src="./images/gallery/hotel-amar-resort-&-spa.jpg" alt="Гостиница Amara Resort & Spa."/>
+              <a class="cards-item-link" href="#">
+                <img class="cards-item-img" src="./images/gallery/hotel-amar-resort-&-spa.jpg" alt="Гостиница Amara Resort & Spa."/>
+              </a>
               <a class="cards-link link" href="#">
                 <h3 class="cards-subtitle">Amara Resort & Spa</h3>
               </a>
@@ -156,16 +158,18 @@
                 <p class="results-price price-card">От 4000 ₽</p>
               </div>
               <div class="results-price-wrapper">
-                <a class="buttons button-small result-button brown link" href="#">подробнее</a>
-                <button class="buttons button-small result-button blue" type="submit">в избранное</button>
+                <a class="result-button buttons button-small brown link" href="#">подробнее</a>
+                <button class="result-button buttons button-small blue" type="submit">в избранное</button>
               </div>
               <div class="rating-wrapper">
                 <img class="number-of-stars" src="./images/gallery/star.svg" alt="4 звезды."/>
-                <a class="buttons button-small result-button gray link" href="#">Рейтинг: 8,5</a>
+                <a class="result-button buttons button-small gray link" href="#">Рейтинг: 8,5</a>
               </div>
             </li>
             <li class="cards-item">
-              <img class="cards-img" src="./images/gallery/hotel-villas-at-poco-diablo.jpg" alt="Гостиница Villas at Poco Diablo."/>
+              <a class="cards-item-link" href="#">
+                <img class="cards-img" src="./images/gallery/hotel-villas-at-poco-diablo.jpg" alt="Гостиница Villas at Poco Diablo."/>
+              </a>
               <a class="cards-link link" href="#">
                 <h3 class="cards-subtitle">Villas at Poco Diablo</h3>
               </a>
@@ -174,16 +178,18 @@
                 <p class="results-price price-card">От 5000 ₽</p>
               </div>
               <div class="results-price-wrapper">
-                <a class="buttons button-small result-button brown link" href="#">подробнее</a>
-                <button class="buttons button-small result-button" type="submit">в избранном</button>
+                <a class="result-button buttons button-small brown link" href="#">подробнее</a>
+                <button class="result-button buttons button-small" type="submit">в избранном</button>
               </div>
               <div class="rating-wrapper">
                 <img class="number-of-stars" src="./images/gallery/star.svg" alt="4 звезды."/>
-                <a class="buttons button-small result-button gray link" href="#">Рейтинг: 9,2</a>
+                <a class="result-button buttons button-small gray link" href="#">Рейтинг: 9,2</a>
               </div>
             </li>
             <li class="cards-item">
-              <img class="cards-img" src="./images/gallery/hotel-desert-quail-inn.jpg" alt="Гостиница Desert Quail In."/>
+              <a class="cards-item-link" href="#">
+                <img class="cards-img" src="./images/gallery/hotel-desert-quail-inn.jpg" alt="Гостиница Desert Quail In."/>
+              </a>
               <a class="cards-link link" href="#">
                 <h3 class="cards-subtitle">Desert Quail Inn</h3>
               </a>
@@ -192,17 +198,19 @@
                 <p class="results-price price-card">От 2500 ₽</p>
               </div>
               <div class="results-price-wrapper">
-                <a class="buttons button-small result-button brown link" href="#">подробнее</a>
-                <button class="buttons button-small result-button blue" type="submit">в избранное</button>
+                <a class="result-button buttons button-small brown link" href="#">подробнее</a>
+                <button class="result-button buttons button-small blue" type="submit">в избранное</button>
               </div>
               <div class="rating-wrapper">
                 <img class="number-of-stars" src="./images/gallery/star.svg" alt="3 звезды."/>
-                <a class="buttons button-small result-button gray link" href="#">Рейтинг: 6,9</a>
+                <a class="result-button buttons button-small gray link" href="#">Рейтинг: 6,9</a>
               </div>
             </li>
             <li class="cards-item">
-              <a class="cards-link link" href="#">
+              <a class="cards-item-link" href="#">
                 <img class="cards-img" src="./images/gallery/hotel-greentree-inn.jpg" alt="Гостиница GreenTree Inn."/>
+              </a>
+              <a class="cards-link link" href="#">
                 <h3 class="cards-subtitle">GreenTree Inn</h3>
               </a>
               <div class="results-price-wrapper">
@@ -210,12 +218,12 @@
                 <p class="results-price price-card">От 1500 ₽</p>
               </div>
               <div class="results-price-wrapper">
-                <a class="buttons button-small result-button brown link" href="#">подробнее</a>
-                <button class="buttons button-small result-button blue" type="submit">в избранное</button>
+                <a class="result-button buttons button-small brown link" href="#">подробнее</a>
+                <button class="result-button buttons button-small blue" type="submit">в избранное</button>
               </div>
               <div class="rating-wrapper">
                 <img class="number-of-stars" src="./images/gallery/star.svg" alt="2 звезды."/>
-                <a class="buttons button-small result-button gray link" href="#">Рейтинг: 5,0</a>
+                <a class="result-button buttons button-small gray link" href="#">Рейтинг: 5,0</a>
               </div>
             </li>
           </ul>

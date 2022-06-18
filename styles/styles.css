@@ -19,10 +19,12 @@ html {
 }
 
 /* :root {
-    --basic-extra-dark: #242424;
-    --basic-dark: #595959;
-    --basic-light: #e7e7e7;
-    --basic-extra-light: #f6f6f6;
+    --background-body: #e5e5e5;
+    --background-brown: #756157;
+    --accent-color: #82b3d3;
+    --main-text-color: #333333;
+    --text-colored-background: #ffffff;
+    --favorite-color: #7db54f;
 } */
 
 /* Базовые стили */
@@ -44,7 +46,7 @@ body {
   font-size: 22px;
   line-height: 26px;
   color: #000;
-  background-color: #e5e5e5;
+  background-color: var(#e5e5e5);
 }
 
 .list {
@@ -55,12 +57,9 @@ body {
   text-decoration: none;
 }
 
-.address {
-  font-style: normal;
-}
-
 img {
   max-width: 100%;
+  height: auto;
   vertical-align: bottom;
 }
 
@@ -129,6 +128,7 @@ img {
   display: flex;
   justify-content: space-between;
   padding: 0 70px;
+  margin-bottom: -5px;
 }
 
 .navigation-left-link-wrapper {
@@ -138,27 +138,42 @@ img {
 .navigation {
   display: flex;
   margin-left: 47px;
+  margin-bottom: 5px;
 }
 
 .navigation-list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-}
-
-.navigation-left-item:not(:last-child) {
-  margin-right: 34px;
 }
 
 .navigation-link {
   display: flex;
   align-items: center;
+  padding: 17px;
   font-weight: 700;
   color: #000;
+}
+
+.underline {
+  position: relative;
+}
+
+.underline::after {
+  position: absolute;
+  right: 17px;
+  bottom: -3px;
+  left: 17px;
+  display: block;
+  height: 2px;
+  content: "";
+  background-color: #756157;
 }
 
 .navigation-right-link-wrapper {
   display: flex;
   align-items: center;
+  margin-bottom: 5px;
 }
 
 .number-of-favorites {
@@ -173,7 +188,7 @@ img {
 
 .navigation-button {
   width: 160px;
-  height: 37px;
+  padding: 8px 0;
   margin-left: 20px;
 }
 
@@ -189,12 +204,22 @@ main {
 
 .hero-wrapper {
   width: 100%;
+  max-height: 485px;
   box-sizing: border-box;
   background-color: #82b3d3;
   background-image: url(../images/hero/hero-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   padding: 51px 0 82px 0;
+}
+
+.hero-wrapper::after {
+  display: block;
+  width: 1200px;
+  height: 57px;
+  margin-top: 25px;
+  content: "";
+  background-image: url(../images/hero/vector.png);
 }
 
 .title {
@@ -306,7 +331,7 @@ main {
 
 .search-button {
   width: 574px;
-  height: 60px;
+  padding: 12px 15px;
   margin: 0 313px 93px;
 }
 
@@ -341,10 +366,9 @@ main {
 
 .user-field {
   width: 600px;
-  height: 60px;
+  padding: 19px 0 19px 22px;
   font-size: 18px;
   line-height: 21px;
-  padding-left: 22px;
   background-color: #f2f2f2;
   border: 0 solid transparent;
   border-radius: 10px 0 0 10px;
@@ -352,7 +376,7 @@ main {
 
 .subscription-button {
   width: 200px;
-  height: 60px;
+  padding: 12px 15px;
   border-radius: 0px 10px 10px 0px;
 }
 
@@ -461,14 +485,38 @@ main {
   text-transform: capitalize;
 }
 
-.filter-reset {
-  font-size: 16px;
-  line-height: 21px;
+.control-wrapper {
+  display: flex;
 }
 
 .control-input {
-  padding-right: 19px;
-  padding-bottom: 15px;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 14px 0 13px 17px;
+  color: #ffffff;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+}
+
+.control-left-rounding {
+  border-radius: 4px 0 0 4px;
+}
+
+.control-right-rounding {
+  border-radius: 0 4px 4px 0;
+}
+
+.filter-butten {
+  width: 160px;
+  padding: 14px 0;
+}
+
+.filter-reset {
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+  background-color: transparent;
+  border: 0;
 }
 
 /* Результат */
@@ -485,9 +533,8 @@ main {
 
 .price-select {
   width: 290px;
-  height: 49px;
+  padding: 14px 0 14px 20px;
   margin-left: 190px;
-  padding-left: 20px;
   background-color: #fff;
   border: 2px solid #e5e5e5;
 }
@@ -511,13 +558,20 @@ main {
   margin-right: 8px;
 }
 
+.show-choice {
+  border: 2px solid #000000;
+}
+
+/* Карточки */
+
 .cards {
-  padding: 0 72px 0 72px;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  margin: 0 72px 66px 72px;
+  gap: 0 18px;
 }
 
 .cards-item {
-  width: 300px;
-  margin-right: 18px;
   padding: 20px;
 }
 
@@ -526,7 +580,6 @@ main {
 }
 
 .cards-subtitle {
-  width: 300px;
   color: #000000;
   padding: 16px 0 16px 0;
 }
@@ -555,7 +608,7 @@ main {
 .result-button {
   font-weight: 400;
   width: 140px;
-  height: 37px;
+  padding: 8px 0;
   color: #333;
   text-transform: uppercase;
   border-radius: 4px;
@@ -577,7 +630,7 @@ main {
   align-items: center;
   justify-content: space-between;
   padding: 30px 0 25px 0;
-  margin: 66px 71px 0 73px;
+  margin: 0 71px 0 73px;
   border-top: 1px solid #e6e6e6;
 }
 
@@ -612,11 +665,6 @@ main {
 }
 
 /* Каталог-подписка */
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-}
 
 .subscription-catalog {
   background-image: none;
