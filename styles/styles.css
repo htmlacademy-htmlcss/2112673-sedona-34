@@ -43,7 +43,6 @@ body {
 
 img {
   max-width: 100%;
-  vertical-align: bottom;
 }
 
 .visually-hidden {
@@ -273,7 +272,7 @@ img {
   border-radius: 4px;
 }
 
-main {
+.main {
   flex-grow: 1;
 }
 
@@ -291,6 +290,10 @@ main {
   background-repeat: no-repeat;
 }
 
+.hero-img {
+  vertical-align: bottom;
+}
+
 .hero::after {
   content: "";
   display: block;
@@ -303,7 +306,6 @@ main {
 .hero-title {
   width: 630px;
   padding: 62px 290px 31px 285px;
-
 }
 
 .hero-description {
@@ -330,6 +332,10 @@ main {
   width: 33%;
   flex-grow: 1;
   padding: 92px 85px;
+}
+
+.advantages-img {
+  vertical-align: bottom;
 }
 
 .advantages-number {
@@ -366,6 +372,7 @@ main {
 
 .advantages-featuris-image {
   margin-bottom: 30px;
+  vertical-align: bottom;
 }
 
 .advantages-item-latest {
@@ -416,6 +423,7 @@ main {
   background-image: url(../images/subscribe/index-subscription-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  vertical-align: bottom;
 }
 
 .subscription-title {
@@ -547,6 +555,7 @@ main {
   background-image: url(../images/filter/catalog-filter-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  vertical-align: bottom;
 }
 
 .filter-form {
