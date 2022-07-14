@@ -54,20 +54,18 @@
         <ul class="breadcrums-list list">
           <li class="breadcrums-item">
             <a class="breadcrums-link link" href="index.html">
-              <svg class="union-icon" width="13" height="13" viewBox="0 0 13 13">
+              <svg class="union-icon" width="13" height="13" viewBox="0 0 13 13" aria-label="Главная страница.">
                 <path
                   d="m.16 6.15 6-5.5 6 5.5v6.2h-12v-6.2Zm1 .4v4.8h10v-4.8l-5-4.5-5 4.5Zm4 3.8h-1v-3.5h4v3.5h-1v-2.5h-2v2.5Z" />
               </svg>
             </a>
           </li>
           <li class="breadcrums-item">
-
-            <svg class="breadcrums-arrow" width="7" height="10" viewBox="0 0 7 10">
+            <svg class="breadcrums-arrow" width="7" height="10" viewBox="0 0 7 10" aria-label="Стрелка вправо.">
               <path
                 d="m5.051 4.075-3.8-3.4c-.2-.2-.6-.2-.9 0-.3.2-.2.6 0 .8l3.3 3-3.2 3c-.2.2-.2.6 0 .8 0 .1.3.2.4.2.1 0 .3-.1.4-.2l3.8-3.4c.3-.2.3-.6 0-.8Z"
                 fill="#fff" />
             </svg>
-
           </li>
           <li class="breadcrums-item">
             <a class="breadcrums-link link">Гостиницы</a>
@@ -80,15 +78,16 @@
               <ul class="filter-form-list list">
                 <li class="filter-form-item">
                   <input class="controll-input visually-hidden" type="checkbox" name="parking" id="pool" checked />
-                  <label class="controll controll-chk" for="pool">Бассейн</label>
+                  <label class="controll-chk" for="pool">Бассейн</label>
                 </li>
                 <li class="filter-form-item">
-                  <input class="controll-input visually-hidden" type="checkbox" name="parking" id="parking" checked />
-                  <label class="controll controll-chk" for="parking">Парковка</label>
+                  <input class="controll-input visually-hidden" type="checkbox" name="parking" id="parking" checked
+                    disabled />
+                  <label class="controll-chk disabled" for="parking">Парковка</label>
                 </li>
                 <li class="filter-form-item">
                   <input class="controll-input visually-hidden" type="checkbox" name="wi-fi" id="wi-fi" />
-                  <label class="controll controll-chk" for="wi-fi">Wi-Fi</label>
+                  <label class="controll-chk" for="wi-fi">Wi-Fi</label>
                 </li>
               </ul>
             </fieldset>
@@ -97,21 +96,21 @@
               <ul class="filter-form-list list">
                 <li class="filter-form-item">
                   <input class="controll-input visually-hidden" type="radio" name="housing" id="housing1" checked />
-                  <label class="controll controll-radio" for="housing1">Гостиница</label>
+                  <label class="controll-radio" for="housing1">Гостиница</label>
                 </li>
                 <li class="filter-form-item">
                   <input class="controll-input visually-hidden" type="radio" name="housing" id="housing2" />
-                  <label class="controll controll-radio" for="housing2">Мотель</label>
+                  <label class="controll-radio" for="housing2">Мотель</label>
                 </li>
                 <li class="filter-form-item">
                   <input class="controll-input visually-hidden" type="radio" name="housing" id="housing3" />
-                  <label class="controll controll-radio" for="housing3">Апартаменты</label>
+                  <label class="controll-radio" for="housing3">Апартаменты</label>
                 </li>
               </ul>
             </fieldset>
           </div>
           <fieldset class="filter-wrapper-right">
-            <legend class="filter-legend">Стоимость, ₽:</legend>
+            <legend class="filter-legend price-legend">Стоимость, ₽:</legend>
             <div class="controll-wrapper-left">
               <div class="controll-price">
                 <label class="control-min-price">
@@ -146,25 +145,25 @@
       <!-- ============== Результат =============== -->
       <section class="results">
         <div class="results-wrapper">
-          <h2 class="title">Найдено гостиниц: <span>38</span></h2>
-          <select class="results-text price-select" aria-label="Предпочтительная цена">
+          <h2 class="title results-title">Найдено гостиниц: <span>38</span></h2>
+          <select class="results-text price-select" aria-label="Предпочтительная цена.">
             <option>Сначала дешёвые</option>
             <option>Сначала популярные</option>
             <option>Сначала дорогие</option>
           </select>
           <div class="show-wrapper">
-            <a class="show-form-link link" href="#">
-              <svg class="icon-show" width="16" height="14" viewBox="0 0 16 14">
+            <a class="show-form-link-selected link" href="#">
+              <svg class="icon-show" width="16" height="14" viewBox="0 0 16 14" aria-label="Показать карточки.">
                 <path d="M4 0H0v6h4V0ZM16 0h-4v6h4V0ZM10 0H6v6h4V0ZM4 8H0v6h4V8ZM16 8h-4v6h4V8ZM10 8H6v6h4V8Z" />
               </svg>
             </a>
             <a class="show-form-link link" href="#">
-              <svg class="icon-show" width="16" height="14" viewBox="0 0 16 14">
+              <svg class="icon-show" width="16" height="14" viewBox="0 0 16 14" aria-label="Показать слайд-шоу.">
                 <path d="M16 12H0v2h16v-2ZM14 2v6H2V2h12Zm2-2H0v10h16V0Z" fill="#000" />
               </svg>
             </a>
             <a class="show-form-link link" href="#">
-              <svg class="icon-show" width="16" height="14" viewBox="0 0 16 14">
+              <svg class="icon-show" width="16" height="14" viewBox="0 0 16 14" aria-label="Показать список.">
                 <path d="M18 17H16V19H18V17Z" />
                 <path
                   d="M2 0H0v2h2V0ZM16 0H4v2h12V0ZM2 4H0v2h2V4ZM16 4H4v2h12V4ZM2 8H0v2h2V8ZM16 8H4v2h12V8ZM2 12H0v2h2v-2ZM16 12H4v2h12v-2Z" />
@@ -172,6 +171,7 @@
             </a>
           </div>
         </div>
+        <!-- ============== Карточки =============== -->
         <ul class="cards list">
           <li class="cards-item">
             <img class="cards-item-img" src="./images/gallery/hotel-amar-resort-&-spa.jpg" width="300" height="211"
@@ -179,12 +179,14 @@
             <a class="cards-link link" href="#">
               <h3 class="cards-subtitle">Amara Resort & Spa</h3>
             </a>
-            <p class="results-text price-card">Гостиница</p>
-            <p class="results-text price-card">От 4000 ₽</p>
-            <a class="result-button buttons button-small brown link" href="#">подробнее</a>
-            <button class="result-button buttons button-small blue" type="submit">в избранное</button>
-            <span class="rating-stars four-stars"></span>
-            <a class="rating-link buttons button-small gray-text link" href="#">Рейтинг: 8,5</a>
+            <div class="cadrs-details">
+              <p class="results-text price-card">Гостиница</p>
+              <p class="results-text price-card">От 4000 ₽</p>
+              <a class="result-button buttons button-small brown link" href="#">подробнее</a>
+              <button class="result-button buttons button-small blue" type="submit">в избранное</button>
+              <span class="rating-stars four-stars"></span>
+              <a class="rating-link buttons button-small gray-text link" href="#">Рейтинг: 8,5</a>
+            </div>
           </li>
           <li class="cards-item">
             <img class="cards-img" src="./images/gallery/hotel-villas-at-poco-diablo.jpg" width="300" height="211"
@@ -192,12 +194,14 @@
             <a class="cards-link link" href="#">
               <h3 class="cards-subtitle">Villas at Poco Diablo</h3>
             </a>
-            <p class="results-text price-card">Гостиница</p>
-            <p class="results-text price-card">От 5000 ₽</p>
-            <a class="result-button buttons button-small brown link" href="#">подробнее</a>
-            <button class="result-button buttons button-small green" type="submit">в избранном</button>
-            <span class="rating-stars four-stars"></span>
-            <a class="rating-link buttons button-small gray-text link" href="#">Рейтинг: 9,2</a>
+            <div class="cadrs-details">
+              <p class="results-text price-card">Гостиница</p>
+              <p class="results-text price-card">От 5000 ₽</p>
+              <a class="result-button buttons button-small brown link" href="#">подробнее</a>
+              <button class="result-button buttons button-small green" type="submit">в избранном</button>
+              <span class="rating-stars four-stars"></span>
+              <a class="rating-link buttons button-small gray-text link" href="#">Рейтинг: 9,2</a>
+            </div>
           </li>
           <li class="cards-item">
             <img class="cards-img" src="./images/gallery/hotel-desert-quail-inn.jpg" width="300" height="211"
@@ -205,12 +209,14 @@
             <a class="cards-link link" href="#">
               <h3 class="cards-subtitle">Desert Quail Inn</h3>
             </a>
-            <p class="results-text price-card">Гостиница</p>
-            <p class="results-text price-card">От 2500 ₽</p>
-            <a class="result-button buttons button-small brown link" href="#">подробнее</a>
-            <button class="result-button buttons button-small blue" type="submit">в избранное</button>
-            <span class="rating-stars three-stars"></span>
-            <a class="rating-link buttons button-small gray-text link" href="#">Рейтинг: 6,9</a>
+            <div class="cadrs-details">
+              <p class="results-text price-card">Гостиница</p>
+              <p class="results-text price-card">От 2500 ₽</p>
+              <a class="result-button buttons button-small brown link" href="#">подробнее</a>
+              <button class="result-button buttons button-small blue" type="submit">в избранное</button>
+              <span class="rating-stars three-stars"></span>
+              <a class="rating-link buttons button-small gray-text link" href="#">Рейтинг: 6,9</a>
+            </div>
           </li>
           <li class="cards-item">
             <img class="cards-img" src="./images/gallery/hotel-greentree-inn.jpg" width="300" height="211"
@@ -218,12 +224,14 @@
             <a class="cards-link link" href="#">
               <h3 class="cards-subtitle">GreenTree Inn</h3>
             </a>
-            <p class="results-text price-card">Гостиница</p>
-            <p class="results-text price-card">От 1500 ₽</p>
-            <a class="result-button buttons button-small brown link" href="#">подробнее</a>
-            <button class="result-button buttons button-small blue" type="submit">в избранное</button>
-            <span class="rating-stars two-stars"></span>
-            <a class="rating-link buttons button-small gray-text link" href="#">Рейтинг: 5,0</a>
+            <div class="cadrs-details">
+              <p class="results-text price-card">Гостиница</p>
+              <p class="results-text price-card">От 1500 ₽</p>
+              <a class="result-button buttons button-small brown link" href="#">подробнее</a>
+              <button class="result-button buttons button-small blue" type="submit">в избранное</button>
+              <span class="rating-stars two-stars"></span>
+              <a class="rating-link buttons button-small gray-text link" href="#">Рейтинг: 5,0</a>
+            </div>
           </li>
         </ul>
         <!-- =============== Пагинация =============== -->
@@ -249,7 +257,7 @@
             </li>
           </ul>
           <p class="results-price">Гостиниц на странице:
-            <select class="number-select" name="number-hotels">
+            <select class="number-select" name="number-hotels" aria-label="Номер страницы.">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -278,15 +286,15 @@
       <ul class="social list">
         <li class="social-item">
           <a class="social-link link" href="https://vk.com/htmlacademy">
-            <svg class="social-icon" width="25" height="17" viewBox="0 0 25 17">
+            <svg class="social-icon" width="25" height="17" viewBox="0 0 25 17" aria-label="В контакте.">
               <path
                 d="M23.45 1.448C23.616 0.902 23.45 0.5 22.655 0.5H20.03C19.362 0.5 19.054 0.847 18.887 1.23C18.887 1.23 17.552 4.426 15.661 6.502C15.049 7.104 14.771 7.295 14.437 7.295C14.27 7.295 14.019 7.104 14.019 6.557V1.448C14.019 0.792 13.835 0.5 13.279 0.5H9.151C8.734 0.5 8.483 0.804 8.483 1.093C8.483 1.714 9.429 1.858 9.526 3.606V7.404C9.526 8.237 9.373 8.388 9.039 8.388C8.149 8.388 5.984 5.177 4.699 1.503C4.45 0.788 4.198 0.5 3.527 0.5H0.9C0.15 0.5 0 0.847 0 1.23C0 1.912 0.89 5.3 4.145 9.781C6.315 12.841 9.37 14.5 12.153 14.5C13.822 14.5 14.028 14.132 14.028 13.497V11.184C14.028 10.447 14.186 10.3 14.715 10.3C15.105 10.3 15.772 10.492 17.33 11.967C19.11 13.716 19.403 14.5 20.405 14.5H23.03C23.78 14.5 24.156 14.132 23.94 13.404C23.702 12.68 22.852 11.629 21.725 10.382C21.113 9.672 20.195 8.907 19.916 8.524C19.527 8.033 19.638 7.814 19.916 7.377C19.916 7.377 23.116 2.951 23.449 1.448H23.45Z" />
             </svg>
           </a>
         </li>
-        <li class="social-item">
+        <li class="social-item">&nbsp;
           <a class="social-link link" href="https://t.me/htmlacademy">
-            <svg class="social-icon" width="25" height="17" viewBox="0 0 25 17">
+            <svg class="social-icon" width="25" height="17" viewBox="0 0 25 17" aria-label="Телеграм.">
               <path
                 d="M16.7855 0.59926L0.840977 6.74775C-0.247172 7.18481 -0.240877 7.79184 0.641333 8.06253L4.73493 9.33953L14.2063 3.3637C14.6542 3.09121 15.0634 3.2378 14.727 3.53636L7.05332 10.4619H7.05152L7.05332 10.4628L6.77094 14.6823C7.18462 14.6823 7.36718 14.4925 7.5992 14.2686L9.58754 12.3351L13.7234 15.39C14.486 15.81 15.0337 15.5941 15.2234 14.6841L17.9384 1.88885C18.2163 0.774623 17.513 0.270117 16.7855 0.59926V0.59926Z" />
             </svg>
@@ -294,7 +302,7 @@
         </li>
         <li class="social-item">
           <a class="social-link link" href="https://t.me/htmlacademy">
-            <svg class="social-icon" width="25" height="17" viewBox="0 0 25 17">
+            <svg class="social-icon" width="25" height="17" viewBox="0 0 25 17" aria-label="Ютюб.">
               <path
                 d="M18.607 0H3.17413C1.31343 0 0 1.59375 0 3.4V13.4937C0 15.4062 1.31343 17 3.17413 17H18.8259C20.4677 17 22 15.4063 22 13.6V3.4C21.7811 1.59375 20.4677 0 18.607 0ZM7.66169 12.5375V4.4625L14.995 8.5L7.66169 12.5375Z" />
             </svg>
@@ -303,7 +311,7 @@
       </ul>
       <a class="footer-tel-link link" href="tel:+78128121212">+7 (812) 812-12-12</a>
       <a class="academy-link" href="https://htmlacademy.ru/">
-        <svg class="academy-icon" width="115" height="34" viewBox="0 0 115 34">
+        <svg class="academy-icon" width="115" height="34" viewBox="0 0 115 34" aria-label="Логотип HTML-академии.">
           <path d="M0 13.9V16.5H2.5V13.9H0Z" />
           <path
             d="M11.6 5.5C10 5.5 8.8 6.2 8 7.2H7.9V1H5.9V16.5H7.9V11.2C7.9 9.1 9.2 7.6 11.2 7.6C13 7.6 14.1 9 14.1 10.8V16.5H16.1V10.4C16.2 7.4 14.3 5.5 11.6 5.5Z" />
